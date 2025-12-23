@@ -1,0 +1,107 @@
+@import "../../../../components/sass/layout";
+
+.clientReview {
+  padding: 4rem 0;
+  background-color: #f8fbfe;
+
+  > h5 {
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+  }
+
+  .clientReview_container {
+    width: 80vw;
+    padding: 1rem;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+
+    .clientReview_card {
+      background-color: white;
+      padding: 2rem 3rem;
+      border-radius: 5px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+      .clientName_container {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h5 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1.5rem;
+        }
+      }
+
+      .stars {
+        color: $clr1;
+        font-size: 2.7rem;
+      }
+      .content {
+        padding: 2rem 0;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  .clientReview {
+    .clientReview_container {
+      width: 85vw;
+      padding: 0;
+
+      grid-template-columns: 1fr;
+      gap: 2rem;
+
+      .clientReview_card {
+        .clientName_container {
+          h5 {
+            font-size: 2rem;
+          }
+          p {
+            text-align: left;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 510px) {
+  .clientReview {
+    .clientReview_container {
+      width: 85vw;
+      padding: 0;
+
+      grid-template-columns: 1fr;
+      gap: 2rem;
+
+      .clientReview_card {
+        padding: 2rem;
+        .clientName_container {
+          h5 {
+            font-size: 1.5rem;
+          }
+          p {
+            text-align: left;
+            font-size: 1.2rem;
+          }
+        }
+
+        .stars {
+          color: $clr1;
+          font-size: 2rem;
+        }
+        .content {
+          padding-bottom: 0;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}

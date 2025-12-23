@@ -1,0 +1,141 @@
+@import "../components/sass/layout";
+
+.whatsapp {
+  background-color: green;
+  height: 7rem;
+  width: 7rem;
+  border-radius: 100%;
+  position: fixed;
+  z-index: 222222;
+  right: 5rem;
+  bottom: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    font-size: 5rem;
+    color: pink;
+    font-size: 2rem;
+  }
+}
+
+footer {
+  background-color: #222222;
+  // position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer-logo {
+  width: 100px;
+  img {
+    width: 100%;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+
+  h1 {
+    font-size: 2rem;
+    color: white;
+    font-family: $font-gv;
+  }
+}
+
+.footer-up {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 2rem 0;
+
+  div,
+  ul {
+    min-width: 300px;
+    // margin: 0 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  div {
+    p {
+      text-align: center;
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+      font-family: $font-pop;
+      color: white;
+    }
+  }
+
+  a {
+    font-family: $font-pop;
+    font-size: 1.6rem;
+    line-height: 2.5rem;
+    color: white;
+    transition: color 0.5s ease;
+
+    &:hover {
+      color: $clr1;
+    }
+  }
+}
+
+.footer-icons {
+  flex-direction: row !important;
+
+  a {
+    margin: 1.5rem 1rem;
+    font-size: 2.5rem;
+  }
+}
+
+.footer-copy {
+  padding: 1rem 0 2rem;
+  font-size: 1.5rem;
+  font-family: $font-pop;
+  color: white;
+  text-align: center;
+}
+
+@media screen and (max-width: 1023px) and (min-width: 501px) {
+  .footer-up {
+    padding: 2rem 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .whatsapp {
+    right: 2rem;
+    bottom: 2.5rem;
+    color: white;
+  }
+
+  .footer-up {
+    padding: 1rem 0 0 0;
+
+    div,
+    ul {
+      margin: 1rem 0;
+    }
+  }
+
+  .footer-copy {
+    padding: 0 0 1.5rem 0;
+  }
+
+  .footer-icons {
+    a {
+      margin: 0 1rem;
+    }
+  }
+}

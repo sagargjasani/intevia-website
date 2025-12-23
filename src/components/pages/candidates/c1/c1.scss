@@ -1,0 +1,110 @@
+@import "../../../sass/layout";
+.c1 {
+  padding: 5rem;
+  background: url("/images/bg.webp") center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  h1 {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+.c1-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4rem;
+  grid-row-gap: 5rem;
+
+  p {
+    font-size: 1.7rem;
+    color: $clrg;
+    line-height: 3rem;
+  }
+
+  a {
+    color: $clr1;
+  }
+}
+.c1div1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.c1img1 {
+  height: 50vh;
+  background: url("/images/c1-1.webp") center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  border-radius: 50px;
+  box-shadow: 6px 6px 18px 0px rgba(0, 0, 0, 0.329);
+}
+.c1img2 {
+  height: 50vh;
+  background: url("/images/c1-2.webp") center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  border-radius: 50px;
+  box-shadow: 6px 6px 18px 0px rgba(0, 0, 0, 0.329);
+}
+
+.c1lastdiv {
+  & > p {
+    font-weight: 700;
+    line-height: 4rem;
+  }
+  li {
+    display: flex;
+    align-items: center;
+  }
+  span,
+  p {
+    display: inline;
+  }
+
+  span {
+    font-size: 2rem;
+    color: $clr1;
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 501px) {
+  .c1 {
+    padding: 0;
+  }
+  .c1-container {
+    grid-template-columns: 1fr;
+  }
+  p {
+    text-align: left !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .c1 {
+    padding: 0;
+    h1 {
+      margin: 0;
+    }
+  }
+  .c1-container {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  .c1img1,
+  .c1img2 {
+    height: 200px;
+  }
+  .c1lastdiv {
+    p {
+      text-align: left !important;
+      line-height: 2.7rem;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.Framworks {
+  width: 80vw;
+  margin: auto;
+  margin-top: 5rem;
+  h5 {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .ClientLogo_container {
+    //   display: grid;
+    //   grid-template-columns: repeat(7, 1fr);
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    justify-content: center;
+    flex-flow: wrap;
+
+    > div {
+      width: 20%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 1023px) and (min-width: 501px) {
+    .ClientLogo {
+      width: 80vw;
+    }
+    .ClientLogo_container {
+      gap: 3rem;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .ClientLogo {
+      width: 90vw;
+    }
+    .ClientLogo_container {
+      gap: 1rem;
+    }
+  }
+}

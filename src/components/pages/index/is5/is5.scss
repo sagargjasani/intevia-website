@@ -1,0 +1,119 @@
+@import "../../../sass/layout";
+
+.is5 {
+  margin-top: 3rem;
+  margin-bottom: -2rem;
+  h5 {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+}
+
+.is5-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1.5rem;
+  width: 80vw;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    .card-up {
+      transform: translateY(-25%);
+    }
+    .card-down {
+      transform: translateY(-25%);
+    }
+  }
+}
+.card-up {
+  transition: all 0.5s ease;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  width: 100%;
+  background-color: $clr1;
+  height: 200px;
+  span {
+    color: white;
+    font-size: 7rem;
+  }
+  h5 {
+    color: white;
+    font-size: 2rem;
+  }
+}
+.card-down {
+  transition: all 0.5s ease;
+  padding: 0 1rem;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0px 20px 55px -28px rgba(0, 0, 0, 0.75);
+  transform: translateY(-100%);
+  z-index: 1;
+  p {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 501px) {
+  .is5 {
+    margin-bottom: 3rem;
+  }
+  .is5-cards {
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 3rem;
+  }
+  .card-down {
+    height: 150px;
+    transform: translateY(0);
+  }
+  .card {
+    &:hover {
+      .card-up {
+        transform: translateY(0);
+      }
+      .card-down {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .is5 {
+    & > h5 {
+      font-size: 4rem;
+    }
+    margin-bottom: 3rem;
+  }
+  .is5-cards {
+    grid-template-columns: 1fr;
+    grid-row-gap: 3rem;
+  }
+  .card-down {
+    height: 150px;
+    transform: translateY(0);
+  }
+  .card {
+    &:hover {
+      .card-up {
+        transform: translateY(0);
+      }
+      .card-down {
+        transform: translateY(0);
+      }
+    }
+  }
+}

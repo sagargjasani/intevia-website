@@ -1,0 +1,15 @@
+.notes {
+  margin: 5rem auto !important;
+
+  p {
+    font-size: 1.5rem;
+    margin: auto 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .notes {
+    width: 85vw !important;
+    margin: 2.5rem auto !important;
+  }
+}

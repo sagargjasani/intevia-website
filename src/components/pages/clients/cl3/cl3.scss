@@ -1,0 +1,97 @@
+@import "../../../sass/layout";
+.cl3 {
+  padding: 9rem 0;
+  background: url("/images/bg.webp") center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  h1 {
+    font-size: 4.5rem;
+    margin-bottom: 2rem;
+  }
+}
+.cl3-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 4rem;
+  grid-row-gap: 5rem;
+
+  p {
+    font-size: 1.7rem;
+    color: $clrg;
+    line-height: 3rem;
+  }
+
+  a {
+    color: $clr1;
+  }
+}
+.cl3div1 {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+
+  em {
+    font-weight: 700;
+  }
+  ul {
+    span {
+      font-size: 3rem;
+    }
+    p {
+      display: inline;
+    }
+  }
+}
+
+.cl3img1 {
+  height: 90%;
+  background: url("/images/cl3.webp") center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  border-radius: 50px;
+  box-shadow: 6px 6px 18px 0px rgba(0, 0, 0, 0.329);
+}
+
+@media screen and (max-width: 1023px) and (min-width: 501px) {
+  .cl3 {
+    padding: 0;
+  }
+  .cl3-container {
+    grid-template-columns: 1fr;
+  }
+  .cl3img1 {
+    height: 400px;
+    background-position: center center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .cl3 {
+    margin-top: 3rem;
+    padding: 0;
+    h1 {
+      font-size: 2.7rem;
+      margin-bottom: 2rem;
+      margin: 0;
+      text-align: center;
+    }
+    p {
+      text-align: left;
+    }
+  }
+  .cl3-container {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  .cl3img1 {
+    height: 200px;
+  }
+  .cl3div1 {
+    justify-content: center;
+    align-items: center;
+  }
+}

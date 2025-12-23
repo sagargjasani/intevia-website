@@ -1,0 +1,105 @@
+@import "../../../sass/layout";
+
+.s1 {
+  margin: 4rem auto !important;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  background: url("/images/bg2.webp") center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+  padding: 3rem 0;
+
+  p {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    line-height: 3rem;
+  }
+
+  blockquote {
+    display: block;
+    background: #fff;
+    padding: 15px 20px 15px 45px;
+    margin: 0 0 20px;
+    position: relative;
+
+    /*Font*/
+    font-size: 16px;
+    line-height: 1.2;
+    color: #666;
+    text-align: justify;
+
+    /*Borders - (Optional)*/
+    border-left: 5px solid $clr1;
+    /*Box Shadow - (Optional)*/
+    -moz-box-shadow: 2px 2px 15px #ccc;
+    -webkit-box-shadow: 2px 2px 15px #ccc;
+    box-shadow: 2px 2px 15px #ccc;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  blockquote::before {
+    content: "\201C"; /*Unicode for Left Double Quote*/
+
+    /*Font*/
+    font-family: Georgia, serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: #999;
+
+    /*Positioning*/
+    position: absolute;
+    left: 10px;
+    top: 5px;
+  }
+
+  blockquote::after {
+    /*Reset to make sure*/
+    content: "";
+  }
+
+  blockquote a {
+    text-decoration: none;
+    background: #eee;
+    cursor: pointer;
+    padding: 0 3px;
+    color: #c76c0c;
+  }
+
+  blockquote a:hover {
+    color: #666;
+  }
+}
+
+.s1-right {
+  div {
+    height: 95%;
+    width: 80%;
+    margin: auto;
+    background: url("/images/s1.webp") center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 6px 6px 18px 0px rgba(0, 0, 0, 0.329);
+    border-radius: 30px;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 501px) {
+}
+
+@media only screen and (max-width: 500px) {
+  .s1 {
+    grid-template-columns: 1fr;
+  }
+  .s1-right {
+    div {
+      height: 200px;
+      width: 90%;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@import "../components/sass/layout";
+
+.blog-page {
+  display: grid;
+  padding: 3rem 0;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3rem;
+  row-gap: 3rem;
+}
+
+.blog-prev {
+  .b-date {
+    padding: 0 0.6rem;
+  }
+  p {
+    font-size: 1.5rem;
+    padding: 0.5rem 0.3rem;
+    color: $clrg;
+  }
+  a {
+    font-size: 1.7rem;
+    color: $clr1;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: $clr2;
+    }
+  }
+}
+
+.f-img {
+  height: 200px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1023px) and (min-width: 501px) {
+  .blog-page {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .blog-page {
+    grid-template-columns: 1fr;
+  }
+}

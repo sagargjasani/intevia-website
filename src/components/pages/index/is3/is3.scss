@@ -1,0 +1,38 @@
+@import "../../../sass/layout";
+.is3 {
+  margin: 5rem 0;
+  background-color: #f8fbfe;
+  padding: 4rem 0;
+}
+.is3-inner {
+  display: flex;
+  justify-content: space-around;
+
+  p {
+    font-size: 2rem;
+    margin: auto 0;
+    color: $clrg;
+  }
+
+  a {
+    background-color: white;
+    padding: 2rem 4rem;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    font-weight: 700;
+    color: black;
+    border-radius: 10px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .is3-inner {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    a {
+      margin-top: 2rem;
+    }
+  }
+}

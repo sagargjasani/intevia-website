@@ -1,0 +1,38 @@
+@import "../components/sass/layout";
+
+.au-hero {
+  height: 450px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/images/au-hero.webp") center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  p {
+    color: rgba(255, 255, 255, 0.274);
+    font-size: 5rem;
+    top: 50%;
+    left: 10%;
+    font-family: $font-pop;
+    font-weight: 700;
+    text-shadow: 4px 2px 3px rgba(0, 0, 0, 0.356);
+  }
+}
+.oet-hero {
+  height: 450px;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/images/oet-hero.jpg") center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  p {
+    color: rgba(255, 255, 255, 0.274);
+    font-size: 5rem;
+    top: 50%;
+    left: 10%;
+    font-family: $font-pop;
+    font-weight: 700;
+    text-shadow: 4px 2px 3px rgba(0, 0, 0, 0.356);
+  }
+}
