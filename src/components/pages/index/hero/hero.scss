@@ -19,7 +19,7 @@
   h5 {
     font-size: 5rem;
     font-family: $font-gv;
-    color: $clr1;
+    color: $clr2;
     line-height: 2rem;
   }
   h1 {
@@ -42,14 +42,14 @@
       font-family: $font-pop;
       margin: 0 1rem;
 
-      border: 2px solid $clr1;
+      border: 2px solid $clr2;
       color: white;
       border-radius: 100px;
       padding: 0.7rem 1.3rem;
       transition: all 0.5s ease;
 
       &:hover {
-        background-color: $clr1;
+        background-color: $clr2;
         color: white;
       }
     }
