@@ -230,6 +230,7 @@ nav {
     align-items: center;
     flex-direction: column;
     padding: 5rem 0;
+    flex: 1;
   }
 
   .navlink {
@@ -312,7 +313,7 @@ nav {
     span {
       width: 15px;
       height: 2px;
-      background-color: white;
+      background-color: $clr1;
       margin: 0.5rem;
       position: absolute;
       border-radius: 100%;
