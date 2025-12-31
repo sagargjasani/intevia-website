@@ -4,14 +4,12 @@ import { motion } from "framer-motion";
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { useDeviceSelectors } from "react-device-detect";
+import { isMobile } from "react-device-detect";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import "./nav.scss";
 
 const Nav = () => {
-  const [selectors] = useDeviceSelectors(window.navigator.userAgent);
-  const { isMobile } = selectors;
-  const [ham, changeHam] = useState(selectors.isMobile ? false : true);
+  const [ham, changeHam] = useState(true);
   const [subMenu, changeSubMenu] = useState(true);
   const resetHam = () => {
     if (isMobile) {
@@ -40,7 +38,7 @@ const Nav = () => {
 
   const navbar = {
     hidden: {
-      rotateY: 112,
+      rotateY: 120,
     },
     show: {
       rotateY: 0,
@@ -49,19 +47,17 @@ const Nav = () => {
 
   useEffect(() => {
     if (isMobile) {
-      setTimeout(() => {
-        changeHam(true);
-        changeHam(false);
-      }, 1000);
+      changeHam(false);
     }
   }, []);
+
   return (
     <>
       <nav>
         <div className="brand">
           <div className="logo">
             <Link href="/">
-              <img src="/images/logo.png" alt="intevia-logo" />
+              <img src="/images/logo.png" alt="aviteus-logo" />
             </Link>
           </div>
         </div>
@@ -69,10 +65,7 @@ const Nav = () => {
           className={ham ? "ham ham-open" : "ham"}
           onClick={() => changeHam(!ham)}
         >
-          <motion.span
-            animate={{ opacity: 1, x: 0, y: 0, color: "white" }}
-            initial="false"
-          />
+          <motion.span animate={{ opacity: 1, x: 0, y: 0 }} initial="show" />
           <span />
           <span />
           <span />
@@ -153,7 +146,7 @@ const Nav = () => {
               <span />
               <Link href="/services">SERVICES</Link>
             </motion.div>
-            {/* <motion.div
+            <motion.div
               animate={ham ? "show" : "hidden"}
               initial={ham ? "hidden" : "show"}
               variants={navlink}
@@ -162,7 +155,7 @@ const Nav = () => {
               onClick={() => resetHam()}
             >
               <span />
-              <Link href="./files/TIMESHEET_&_Assesment_Intevia_Healthcare.pdf">
+              <Link href="./files/TIMESHEET_&_Assesment_Aviteus_Healthcare.pdf">
                 GET TIMESHEET
               </Link>
             </motion.div>
@@ -175,8 +168,10 @@ const Nav = () => {
               onClick={() => resetHam()}
             >
               <span />
+              {/* <Link> */}
               <a href="#usefullLinks">USEFUL LINKS</a>
-            </motion.div> */}
+              {/* </Link> */}
+            </motion.div>
             <motion.div
               animate={ham ? "show" : "hidden"}
               initial={ham ? "hidden" : "show"}
@@ -202,7 +197,7 @@ const Nav = () => {
               initial={ham ? "hidden" : "show"}
               variants={navIcon}
               transition={{ delay: 1.2 }}
-              href="https://www.facebook.com/Intevia-Healthcare-105692805507912"
+              href="https://www.facebook.com/Aviteus-Healthcare-105692805507912"
             >
               <FaFacebookF />
             </motion.a>
@@ -211,7 +206,7 @@ const Nav = () => {
               initial={ham ? "hidden" : "show"}
               variants={navIcon}
               transition={{ delay: 1.3 }}
-              href="https://www.instagram.com/intevia_healthcare/"
+              href="https://www.instagram.com/aviteus_healthcare/"
             >
               <FaInstagram />
             </motion.a>
@@ -220,7 +215,7 @@ const Nav = () => {
               initial={ham ? "hidden" : "show"}
               variants={navIcon}
               transition={{ delay: 1.4 }}
-              href="https://www.linkedin.com/company/intevia-healthcare"
+              href="https://www.linkedin.com/company/aviteus-healthcare"
             >
               <FaLinkedinIn />
             </motion.a>
