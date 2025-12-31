@@ -146,7 +146,7 @@ const Nav = () => {
               <span />
               <Link href="/services">SERVICES</Link>
             </motion.div>
-            <motion.div
+            {/* <motion.div
               animate={ham ? "show" : "hidden"}
               initial={ham ? "hidden" : "show"}
               variants={navlink}
@@ -158,8 +158,8 @@ const Nav = () => {
               <Link href="./files/TIMESHEET_&_Assesment_Aviteus_Healthcare.pdf">
                 GET TIMESHEET
               </Link>
-            </motion.div>
-            <motion.div
+            </motion.div> */}
+            {/* <motion.div
               animate={ham ? "show" : "hidden"}
               initial={ham ? "hidden" : "show"}
               variants={navlink}
@@ -167,11 +167,8 @@ const Nav = () => {
               className="navlink"
               onClick={() => resetHam()}
             >
-              <span />
-              {/* <Link> */}
               <a href="#usefullLinks">USEFUL LINKS</a>
-              {/* </Link> */}
-            </motion.div>
+            </motion.div> */}
             <motion.div
               animate={ham ? "show" : "hidden"}
               initial={ham ? "hidden" : "show"}
@@ -191,13 +188,13 @@ const Nav = () => {
               <span />
             </motion.div>
           </div>
-          <ul className="nav-icons">
+          {/* <ul className="nav-icons">
             <motion.a
               animate={ham ? "show" : "hidden"}
               initial={ham ? "hidden" : "show"}
               variants={navIcon}
               transition={{ delay: 1.2 }}
-              href="https://www.facebook.com/Aviteus-Healthcare-105692805507912"
+              href="https://www.facebook.com/"
             >
               <FaFacebookF />
             </motion.a>
@@ -219,16 +216,7 @@ const Nav = () => {
             >
               <FaLinkedinIn />
             </motion.a>
-            {/* <motion.a
-            animate={ham ? "show" : "hidden"}
-            initial={ham ? "hidden" : "show"}
-            variants={navIcon}
-            transition={{ delay: 1.5 }}
-            href="https://twitter.com/"
-          >
-            <FaTwitter />
-          </motion.a> */}
-          </ul>
+          </ul> */}
         </motion.div>
       </nav>
     </>

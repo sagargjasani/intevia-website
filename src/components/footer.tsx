@@ -62,7 +62,7 @@ const Footer = () => {
               <a href="mailto:info@inteviahealthcare.co.uk">
                 info@inteviahealthcare.co.uk
               </a>
-              <div className="footer-icons">
+              {/* <div className="footer-icons">
                 <a href="https://www.facebook.com/">
                   <FaFacebookF />
                 </a>
@@ -75,9 +75,9 @@ const Footer = () => {
                 <a href="https://www.linkedin.com/">
                   <FaLinkedinIn />
                 </a>
-              </div>
+              </div> */}
             </div>
-            <div id="usefullLinks">
+            {/* <div id="usefullLinks">
               <h1>Usefull Links</h1>
               <ul>
                 <li>
@@ -100,20 +100,15 @@ const Footer = () => {
                     Cyber Essential Certificate
                   </Link>
                 </li>
-                {/* <li>
-                  <Link href="./files/APSCo UK Membership Certificate 2024 final - Intevia Healthcare.pdf">
-                    APSCo membership
-                  </Link>
-                </li> */}
               </ul>
-            </div>
+            </div> */}
           </div>
-          <div className="footer-copy">
+          {/* <div className="footer-copy">
             Company Registration Number - 13337393 <br /> ICO NUMBER - ZB303299{" "}
             <br />
             &copy; {new Date().getFullYear()} Intevia Healthcare | All Rights
             Reserved.
-          </div>
+          </div> */}
         </div>
       </footer>
     </>
